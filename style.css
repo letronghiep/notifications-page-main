@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,800;1,500;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: hsl(211, 68%, 94%);
+}
+.container {
+    background-color: hsl(0, 0%, 100%);
+    max-width: 660px;
+    /* max-height: 750px; */
+    padding: 35px 25px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 30px;
+}
+.notifi_box {
+    display: flex;
+    align-items: center;
+
+}
+.notifi_box #notifications {
+    width: 30px;
+    height: 20px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-left: 15px;
+    background-color: hsl(219, 85%, 26%);
+}
+.mark_all {
+    color:hsl(219, 14%, 63%);
+    cursor: pointer;
+}
+.mark_all:hover {
+    color: hsl(219, 85%, 26%);
+}
+.notif_card {
+    display: flex;
+    position: relative;
+    /* align-items: center; */
+    padding: 10px;
+    background-color: hsl(211, 68%, 94%);
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+.notif_card:hover .text {
+    background-color: hsl(211, 68%, 94%);
+}
+.notif_card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.notif_card .desc {
+    margin: 0 20px;
+    position: relative;
+}
+.time {
+    margin-top: 5px;
+    color:  hsl(219, 14%, 63%);
+}
+.text {
+    border: 1px solid hsl(211, 68%, 94%);
+    padding: 18px;
+    margin-top: 12px;
+    border-radius: 6px;
+}
+.chess {
+    position: absolute;
+    right: 30px;
+}
+.user_activity strong:hover,
+.user_activity b:hover {
+    color: hsl(219, 85%, 26%);
+
+}
+.unread::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    right: -15px;
+    top: 6px;
+}
+@media only screen and (max-width: 375px) {
+    .container {
+        max-width: 345px;
+    }
+    .notif_card img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+    .title {
+        font-size: 14px;
+    }
+    .notif_card .desc {
+        margin: 0 10px;
+    }
+    .user_activity {
+        font-size: 12px;
+    }
+    .time {
+        font-size: 12px;
+    }
+    .text {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
